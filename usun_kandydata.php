@@ -34,7 +34,7 @@ if(isset($_GET['id'])) {
 </div>
 
 <footer>
-    <p>© 2025 System Głosowania w Wyborach Powszechnych</p>
+    <p>&copy; 2025 System Głosowania w Wyborach Powszechnych</p>
     <p>Autorzy: Oliwia Bartosiak, Jan Bursiak</p>
 </footer>
 </body>
