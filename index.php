@@ -49,17 +49,6 @@ $sumaGlosow = mysqli_fetch_assoc($sumaResult)['suma'];
         </tr>
 
         <?php foreach($kandydaci as $k): ?>
-        <?php
-            $glosyRes = mysqli_query(
-                $conn,
-                "SELECT COUNT(*) AS ile FROM glosy WHERE kandydat_id = {$k['id']}"
-            );
-            $ile = mysqli_fetch_assoc($glosyRes)['ile'];
-
-            $procent = ($sumaGlosow > 0)
-                ? round(($ile / $sumaGlosow) * 100, 2)
-                : 0;
-        ?>
         <tr>
             <td><?= $k['id'] ?></td>
             <td><?= $k['imie'] ?></td>
@@ -79,7 +68,7 @@ $sumaGlosow = mysqli_fetch_assoc($sumaResult)['suma'];
     </table>
 </div>
 <footer>
-    <p>© 2025 System Głosowania w Wyborach Powszechnych</p>
+    <p>&copy; 2025 System Głosowania w Wyborach Powszechnych</p>
     <p>Autorzy: Oliwia Bartosiak, Jan Bursiak</p>
 </footer>
 
