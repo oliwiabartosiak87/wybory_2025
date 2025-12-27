@@ -7,7 +7,6 @@ if(!isset($_GET['id'])) {
 
 $id = $_GET['id'];
 
-// Pobranie danych rekordu
 $sql = "SELECT * FROM kandydaci WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);
@@ -16,7 +15,7 @@ if(!$user) {
     die("Nie znaleziono rekordu");
 }
 
-// Aktualizacja po wysłaniu formularza
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $imie = $_POST['imie'];
     $nazwisko = $_POST['nazwisko'];
@@ -83,3 +82,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 </footer>
 </body>
 </html>
+
